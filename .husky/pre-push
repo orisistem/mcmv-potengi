@@ -1,0 +1,4 @@
+#!/bin/sh
+# O Husky vai rodar este arquivo toda vez que alguem digitar `git push`.
+# O comando abaixo executa a suite de testes configurada no package.json
+npm run test

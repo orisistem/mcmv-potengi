@@ -1,0 +1,42 @@
+{
+  "name": "proj-ensaios",
+  "version": "1.0.0",
+  "description": "This repository serves as a stack-agnostic template for software development projects. It is organized to support both strong project management and clean software architecture.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"[WARNING] No tests implemented yet in template. Bypassing pre-push hook.\" && exit 0",
+    "commit": "node ./node_modules/commitizen/bin/git-cz.js",
+    "ship": "git add . && node ./node_modules/commitizen/bin/git-cz.js && git push"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
+    "@eslint/js": "^10.0.1",
+    "commitizen": "^4.3.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^10.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.4"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "node ./node_modules/eslint/bin/eslint.js --fix",
+      "node ./node_modules/prettier/bin/prettier.cjs --write"
+    ],
+    "*.{json,md,yml,yaml,html,css,scss}": [
+      "node ./node_modules/prettier/bin/prettier.cjs --write"
+    ]
+  }
+}
