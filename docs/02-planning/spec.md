@@ -8,7 +8,7 @@ Site institucional de divulgação do Residencial Novo Potengi (Programa MCMV �
 
 | Camada | Tecnologia |
 |--------|------------|
-| Frontend | Next.js (App Router) + Tailwind CSS + React Hook Form + Zod |
+| Frontend | React + Vite + Tailwind CSS + React Hook Form + Zod |
 | Backend | NestJS + Prisma ORM |
 | Banco de Dados | PostgreSQL |
 | Storage | Supabase Storage |
@@ -49,7 +49,7 @@ src/
 5. Implementação concreta (PrismaRepository) executa no banco
 6. Resultado retorna pela mesma cadeia
 
-### 2.2 Frontend (Next.js)
+### 2.2 Frontend (React + Vite)
 
 Cada módulo de negócio segue Clean Architecture interna:
 
@@ -302,7 +302,7 @@ model LogAtividade {
 
 ---
 
-## 6. Frontend — Rotas (Next.js App Router)
+## 6. Frontend — Rotas (React Router v6)
 
 ```
 /                           # Página institucional (hero, sobre, MCMV, como participar)
@@ -314,7 +314,7 @@ model LogAtividade {
 /admin/esqueci-senha        # Recuperação de senha
 /admin/dashboard            # Dashboard com estatísticas
 /admin/candidatos           # Lista de candidatos (com filtros)
-/admin/candidatos/[id]      # Detalhes do candidato
+/admin/candidatos/:id       # Detalhes do candidato
 /admin/conteudo             # Gerenciamento de conteúdo institucional
 ```
 
@@ -323,7 +323,7 @@ model LogAtividade {
 ## 7. Fluxo de Dados — Upload de Documentos
 
 ```
-[Candidato] → Next.js App → RHF + Zod (validação)
+[Candidato] → React + Vite → RHF + Zod (validação)
     ↓
 [NestJS API] → Use Case (valida regras de negócio)
     ↓

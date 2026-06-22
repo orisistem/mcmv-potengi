@@ -3,7 +3,7 @@
 ## Arquitetura Sugerida
 
 ### Frontend
-- **Tecnologia:** HTML5, CSS3, JavaScript (framework opcional: React, Vue.js ou Next.js)
+- **Tecnologia:** HTML5, CSS3, TypeScript, React + Vite
 - **Responsividade:** Layout adaptável (mobile-first)
 - **Bibliotecas:** A definir conforme framework escolhido
 
